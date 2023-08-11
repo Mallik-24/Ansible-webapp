@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>10WEEKSOFCLOUDOPSCHALLENGE</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f7f7f7;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    header {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 1em 0;
+      width: 100%;
+    }
+
+    .container {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    footer {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 1em 0;
+      width: 100%;
+    }
+
+    .cube-container {
+      perspective: 800px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: calc(100vh - 4em); /* Adjust the height to fit between header and footer */
+      animation: blinkCube 5s infinite alternate;
+    }
+
+    .cube {
+      width: 200px;
+      height: 200px;
+      position: relative;
+      transform-style: preserve-3d;
+      animation: rotate 10s infinite linear;
+    }
+
+    .face {
+      width: 200px;
+      height: 200px;
+      position: absolute;
+      box-sizing: border-box;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 18px;
+      border: 2px solid #dcdcdc; /* Light gray border for all cube faces */
+      background-color: ivory; /* Default color for all cube faces */
+      transform-style: preserve-3d;
+      overflow: hidden;
+    }
+
+    .front {
+      transform: translateZ(100px);
+    }
+
+    .back {
+      transform: rotateY(180deg) translateZ(100px);
+    }
+
+    .right {
+      transform: rotateY(90deg) translateZ(100px);
+    }
+
+    .left {
+      transform: rotateY(-90deg) translateZ(100px);
+    }
+
+    img {
+      max-width: 90%;
+      max-height: 90%;
+      border-radius: 5px;
+    }
+
+    @keyframes rotate {
+      from {
+        transform: rotateY(0deg);
+      }
+      to {
+        transform: rotateY(360deg);
+      }
+    }
+
+    @keyframes blinkCube {
+      0%, 100% {
+        transform: translateZ(0);
+      }
+      50% {
+        transform: translateZ(200px);
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="https://k21academy.com/wp-content/uploads/2023/03/logo-strip-4-1.png" alt="Logo 1">
+    <img src="https://k21academy.com/wp-content/uploads/2023/03/logo-strip-6.png" alt="Logo 2">
+    <h1>10WEEKSOFCLOUDOPSCHALLENGE</h1>
+    <p>By TechTutorials with Piyush</p>
+  </header>
+
+  <div class="container">
+    <div class="cube-container">
+      <div class="cube">
+        <div class="face front">
+          <!-- Docker Image -->
+          <img src="https://d1q6f0aelx0por.cloudfront.net/product-logos/library-docker-logo.png" alt="Docker">
+        </div>
+        <div class="face back">
+          <!-- AWS Image -->
+          <img src="https://cdn.iconscout.com/icon/free/png-512/free-aws-3215369-2673787.png" alt="AWS">
+        </div>
+        <div class="face right">
+          <!-- Kubernetes Image -->
+          <img src="https://1000logos.net/wp-content/uploads/2022/07/Kubernetes-Logo-768x432.png" alt="Kubernetes">
+        </div>
+        <div class="face left">
+          <!-- Custom Image - Replace with your image URL -->
+          <img src="https://lh3.googleusercontent.com/Lg9NYzrVuZur0ffBgw2Lv-wcjqK3uOFd1BHfYp7s3c0lXsp6yIZfUSCbX2GhM9NzSDg8b-xegdOb0gtTYPeDzeRCkj0cLqV6aQ=w840" alt="Custom Image">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2023 10WEEKSOFCLOUDOPSCHALLENGE. All rights reserved.</p>
+  </footer>
+</body>
+</html>
